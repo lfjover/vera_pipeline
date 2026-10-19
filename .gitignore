@@ -1,0 +1,7 @@
+.env
+output/
+inbox/*
+!inbox/.gitkeep
+__pycache__/
+.venv/
+_to_delete/

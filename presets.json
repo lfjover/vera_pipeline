@@ -1,0 +1,27 @@
+{
+  "base_instruction": "Same woman, identical face, same facial features, freckles and skin texture, same hair, same outfit, same framing and camera distance. Raw unretouched skin, realistic photograph, no beauty filter.",
+  "lighting": {
+    "red_moody": "Change the lighting to deep red moody light, strong shadows on one side of the face, dark background.",
+    "blue_night": "Change the lighting to cold blue night light with soft falloff and deep shadows.",
+    "harsh_flash": "Change the lighting to a harsh direct on-camera flash, hard shadow behind her, slightly overexposed skin highlights.",
+    "chiaroscuro": "Change the lighting to dramatic chiaroscuro: a single hard light from the side, half the face in deep shadow.",
+    "golden_window": "Change the lighting to warm golden window light raking across the face.",
+    "candlelight": "Change the lighting so the only light comes from a warm oil lamp or candle beside her, glowing amber on one side of her face, the rest of the room falling into deep shadow."
+  },
+  "pose": {
+    "none": "",
+    "head_turn": "She turns her head slightly to the side, eyes still on the camera.",
+    "chin_down": "She lowers her chin slightly and looks up into the lens.",
+    "hand_to_face": "She raises one hand gently to her cheek.",
+    "look_away": "She glances slightly away from the camera."
+  },
+  "clip_prompt": "Smooth, slow cinematic transition. The light gradually shifts and she moves naturally. Her face stays identical throughout.",
+  "clip_negative_prompt": "face morphing, distorted face, extra fingers, warped hands, flicker",
+  "image_model": "kling-v1-5",
+  "image_reference": "subject",
+  "image_fidelity": 0.5,
+  "human_fidelity": 0.95,
+  "video_model": "kling-v1-6",
+  "video_mode": "pro",
+  "video_duration": "5"
+}
