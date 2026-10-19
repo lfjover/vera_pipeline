@@ -18,9 +18,13 @@ class KlingError(RuntimeError):
 
 
 def _token() -> str:
+    """A single KLING_API_KEY is sent as-is; otherwise sign a JWT from the access/secret key pair."""
+    api_key = os.getenv("KLING_API_KEY")
+    if api_key:
+        return api_key
     ak, sk = os.getenv("KLING_ACCESS_KEY"), os.getenv("KLING_SECRET_KEY")
     if not ak or not sk:
-        raise KlingError("Missing KLING_ACCESS_KEY / KLING_SECRET_KEY. Copy .env.example to .env and fill them in.")
+        raise KlingError("Missing KLING_API_KEY (or KLING_ACCESS_KEY / KLING_SECRET_KEY). Copy .env.example to .env and fill them in.")
     now = int(time.time())
     return jwt.encode({"iss": ak, "exp": now + 1800, "nbf": now - 5}, sk, algorithm="HS256",
                       headers={"alg": "HS256", "typ": "JWT"})
