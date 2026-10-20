@@ -1,0 +1,3 @@
+requests>=2.31
+boto3>=1.34      # only needed to upload local files to your bucket
+pytest>=8        # tests

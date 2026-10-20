@@ -1,0 +1,8 @@
+# Creative direction applied to EVERY prompt in a run, on top of each photographer's style.
+# Edit freely. Lines starting with # are ignored. Leave it empty (or run with --no-direction) to turn it off.
+# One-off override:  python -m vera run --direction "your text"
+
+Experimental, unexpected lighting: colored gels (deep red, teal, magenta) mixed with warm daylight,
+hard light through patterned or broken shapes (blinds, lace, leaves, glass, prisms), light leaks and lens flare,
+strong shadows across the face, mixed color temperatures. The light should feel bold and surprising,
+but the face must stay clearly visible and the skin realistic.

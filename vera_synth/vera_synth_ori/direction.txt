@@ -1,0 +1,11 @@
+# Lighting style for the opening frames. Each portrait gets its own setup in this style,
+# not a copy of this paragraph.
+# Each winner also gets final.jpg: the same person and place, a slightly different angle and pose,
+# and a different cinematic light, so the two frames can become a moving clip.
+# Edit freely. Lines starting with # are ignored. Leave it empty (or run with --no-direction) to turn it off.
+# One-off override:  python -m vera run --direction "your text"
+
+Experimental, unexpected lighting: colored gels (deep red, teal, magenta) mixed with warm daylight,
+hard light through patterned or broken shapes (blinds, lace, leaves, glass, prisms), light leaks and lens flare,
+strong shadows across the face, mixed color temperatures. The light should feel bold and surprising,
+but the face must stay clearly visible and the skin realistic.

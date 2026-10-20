@@ -1,0 +1,5 @@
+# Creative direction applied to EVERY prompt in a run, on top of each artist's manner.
+# Lines starting with # are ignored.
+
+Original paintings only. No photographs of people, no cameras, no film look.
+Visible material: brush, pigment, canvas or paper. No text, no signature, no watermark.

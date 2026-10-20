@@ -5,3 +5,7 @@ inbox/*
 __pycache__/
 .venv/
 _to_delete/
+.pytest_cache/
+.DS_Store
+runs/
+logs/

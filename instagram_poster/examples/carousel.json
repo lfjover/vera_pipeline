@@ -1,0 +1,6 @@
+{
+  "type": "carousel",
+  "media": ["../media/look_front.jpg", "../media/look_side.jpg", "../media/look_full.jpg"],
+  "caption": "Three angles, one outfit. Which one's your favorite? 👗",
+  "ai_generated": true
+}

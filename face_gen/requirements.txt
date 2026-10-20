@@ -1,0 +1,7 @@
+torch>=2.5
+diffusers>=0.31
+transformers>=4.46
+accelerate>=1.0
+safetensors>=0.4
+Pillow>=10.1
+pytest>=8        # tests
