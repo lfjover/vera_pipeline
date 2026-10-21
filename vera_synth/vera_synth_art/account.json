@@ -1,8 +1,8 @@
 {
-  "id": "vera_synth_photo",
-  "name": "VeraSynth Photo",
-  "focus": "photography",
+  "id": "vera_synth_art",
+  "name": "VeraSynth Art",
+  "focus": "art",
   "post_type": "image",
-  "interval_hours": 5,
+  "interval_hours": 1,
   "ai_generated": true
 }

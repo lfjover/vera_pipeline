@@ -1,12 +1,15 @@
 {
   "type": "image",
   "media": [
-    "../runs/2026-10-20_0918/feed/05.jpg"
+    "../runs/2026-10-20_0918/feed/06.jpg"
   ],
   "caption": "#ai #aiart #portrait #portraitphotography #filmphotography #photographer #filmlight #streetportrait #classicphotography #aiportrait #madewithai",
-  "publish_after": "2026-10-20T13:00-05:00",
+  "publish_after": "2026-10-20T14:00-05:00",
   "ai_generated": true,
   "account": "vera_synth_photo",
   "run": "2026-10-20_0918",
-  "photographer": "james-van-der-zee"
+  "photographer": "helen-levitt",
+  "published_at": "2026-10-21T02:47:58+00:00",
+  "media_id": "18436045546177812",
+  "permalink": "https://www.instagram.com/p/DevXsa5lqjZ/"
 }
