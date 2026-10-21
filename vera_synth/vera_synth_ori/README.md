@@ -127,7 +127,7 @@ Drop `--dry-run` only when that post should actually go live. The Instagram toke
 
 ## One post every 5 hours
 
-`account.json` sets `interval_hours` to 5. Each new portrait is scheduled 5 hours after the previous one. The Mac job `com.verasynth.ori.post` runs every 5 hours and publishes at most one due post. The computer has to be awake; if it was asleep, one post goes out the next time the job runs.
+`account.json` sets `interval_hours` to 5. Each new portrait is scheduled 5 hours after the previous one. On the Raspberry Pi, the systemd user timer `verasynth-ori-post.timer` fires every 5 hours and publishes at most one due post. Install or update it with `vera_synth/scheduler/install.sh ori`; the output goes to `logs/post.log`. If the Pi was off when the timer was due, it runs once when the Pi boots.
 
 ## Files
 

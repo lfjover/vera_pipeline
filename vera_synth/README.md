@@ -13,3 +13,18 @@ vera_synth/
 A new account is a sibling folder, named for what it posts, with the same shape: a direction file, a `.env` that is never committed, a `runs/` folder, and its own queue. It does not share another account's token or history.
 
 `vera_synth_photo` is documented in `vera_synth_photo/README.md`.
+
+## Scheduling on the Raspberry Pi
+
+Posting runs on the Pi as systemd user timers, one per account, firing every `interval_hours` from `account.json`. Each run publishes at most one due post from that account's `queue/`.
+
+```
+vera_synth/scheduler/install.sh              # every account that has a .env
+vera_synth/scheduler/install.sh art photo    # only these accounts
+vera_synth/scheduler/install.sh --remove     # stop and delete all the timers
+systemctl --user list-timers 'verasynth-*'   # when each one fires next
+```
+
+The installer creates `instagram_poster/.venv`, writes the units to `~/.config/systemd/user/`, and turns on lingering so the timers keep running after logout and across reboots. Run it again after changing `interval_hours` or moving the repo.
+
+`.env` and `runs/` are not in git, so copy them to the Pi before installing. The queued posts point at images in `runs/`. Only one machine should run the schedule. If the Mac still has the old launchd jobs, unload them there with `launchctl unload ~/Library/LaunchAgents/com.verasynth.*.post.plist`.

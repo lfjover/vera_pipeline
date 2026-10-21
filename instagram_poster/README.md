@@ -73,7 +73,8 @@ oldest first, at most `--max` per run (default 5). Published posts move to
 `queue/failed/` with the error. It stops early if the 24-hour publishing quota is used up.
 
 To run it automatically, schedule `python -m igpost run-queue` every 15–30 minutes
-with cron or launchd on your Mac.
+with cron or a systemd timer. The VeraSynth accounts use systemd timers on the
+Raspberry Pi; see `vera_synth/scheduler/install.sh`.
 
 ## Limits and media rules
 

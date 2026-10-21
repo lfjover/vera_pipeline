@@ -107,7 +107,7 @@ python -m vera run --resume runs/2026-10-19_1530
 
 ## This account
 
-`account.json` names the account. A finished run queues one image post per winning portrait in `queue/`, spaced `interval_hours` apart (5 hours). Each photo is cropped from 9:16 to 4:5 with a white frame. The caption is hashtags only, including the AI hashtags, and Instagram's AI label is on as well. The photographer's name stays off the caption. A scheduled job publishes one due post at a time.
+`account.json` names the account. A finished run queues one image post per winning portrait in `queue/`, spaced `interval_hours` apart (hour). Each photo is cropped from 9:16 to 4:5 with a white frame. The caption is hashtags only, including the AI hashtags, and Instagram's AI label is on as well. The photographer's name stays off the caption. A scheduled job publishes one due post at a time.
 
 ```
 python -m vera account          # what is ready, and what is still missing
@@ -125,9 +125,9 @@ python -m igpost --env-file ../vera_synth/vera_synth_photo/.env run-queue \
 
 Drop `--dry-run` only when that post should actually go live. The Instagram token, user id, and public bucket belong to this account; they are not the ones in `instagram_poster/.env`.
 
-## One post every 5 hours
+## One post every hour
 
-`account.json` sets `interval_hours` to 5. Each new portrait is scheduled 5 hours after the previous one. The Mac job `com.verasynth.photo.post` runs every 5 hours and publishes at most one due post. The computer has to be awake; if it was asleep, one post goes out the next time the job runs.
+`account.json` sets `interval_hours` to 1. Each new portrait is scheduled hour after the previous one. On the Raspberry Pi, the systemd user timer `verasynth-photo-post.timer` fires every hour and publishes at most one due post. Install or update it with `vera_synth/scheduler/install.sh photo`; the output goes to `logs/post.log`. If the Pi was off when the timer was due, it runs once when the Pi boots.
 
 ## Files
 
